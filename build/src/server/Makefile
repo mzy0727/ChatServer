@@ -152,6 +152,33 @@ ChatServer.cc.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatServer.cc.s
 .PHONY : ChatServer.cc.s
 
+ChatService.o: ChatService.cc.o
+
+.PHONY : ChatService.o
+
+# target to build an object file
+ChatService.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o
+.PHONY : ChatService.cc.o
+
+ChatService.i: ChatService.cc.i
+
+.PHONY : ChatService.i
+
+# target to preprocess a source file
+ChatService.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatService.cc.i
+.PHONY : ChatService.cc.i
+
+ChatService.s: ChatService.cc.s
+
+.PHONY : ChatService.s
+
+# target to generate assembly for a file
+ChatService.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatService.cc.s
+.PHONY : ChatService.cc.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -191,6 +218,9 @@ help:
 	@echo "... ChatServer.o"
 	@echo "... ChatServer.i"
 	@echo "... ChatServer.s"
+	@echo "... ChatService.o"
+	@echo "... ChatService.i"
+	@echo "... ChatService.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

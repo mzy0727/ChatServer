@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mzy/Code/ChatServer/src/server/ChatServer.cc" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/ChatServer.cc.o"
+  "/home/mzy/Code/ChatServer/src/server/ChatService.cc" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o"
   "/home/mzy/Code/ChatServer/src/server/main.cpp" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -14,6 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../include/server"
   "../include/client"
+  "../thirdparty"
   "/usr/local/include/tiny_network/net"
   "/usr/local/include/tiny_network/base"
   "/usr/local/include/tiny_network/timer"

@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mzy/Code/ChatServer/include -I/home/mzy/Code/ChatServer/include/server -I/home/mzy/Code/ChatServer/include/client -I/usr/local/include/tiny_network/net -I/usr/local/include/tiny_network/base -I/usr/local/include/tiny_network/timer -I/usr/local/include/tiny_network/logger 
+CXX_INCLUDES = -I/home/mzy/Code/ChatServer/include -I/home/mzy/Code/ChatServer/include/server -I/home/mzy/Code/ChatServer/include/client -I/home/mzy/Code/ChatServer/thirdparty -I/usr/local/include/tiny_network/net -I/usr/local/include/tiny_network/base -I/usr/local/include/tiny_network/timer -I/usr/local/include/tiny_network/logger 
 

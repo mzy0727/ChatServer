@@ -10,6 +10,8 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/include/server)
 include_directories(${PROJECT_SOURCE_DIR}/include/client)
+include_directories(${PROJECT_SOURCE_DIR}/thirdparty)
+# 加载tiny_network的相关头文件
 include_directories(/usr/local/include/tiny_network/net)
 include_directories(/usr/local/include/tiny_network/base)
 include_directories(/usr/local/include/tiny_network/timer)

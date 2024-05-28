@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/ChatServer.dir/ChatServer.cc.o CMakeFiles/ChatServer.dir/main.cpp.o  -o ../../../bin/ChatServer  -ltiny_network -lpthread 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/ChatServer.dir/ChatServer.cc.o CMakeFiles/ChatServer.dir/ChatService.cc.o CMakeFiles/ChatServer.dir/main.cpp.o  -o ../../../bin/ChatServer  -ltiny_network -lpthread 
