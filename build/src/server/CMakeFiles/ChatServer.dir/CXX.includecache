@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/server/ChatServer.h
+tiny_network/net/EventLoop.h
+-
+tiny_network/net/TcpServer.h
+-
+tiny_network/logger/Logging.h
+-
+string
+-
+iostream
+-
+
+/home/mzy/Code/ChatServer/src/server/ChatServer.cc
+ChatServer.h
+/home/mzy/Code/ChatServer/src/server/ChatServer.h
+
