@@ -35,6 +35,8 @@ void ChatServer::onConnection(const TcpConnectionPtr& conn)
     {
         // 客户端断开连接
        // LOG_INFO << "Connection DOWN : " << conn->peerAddress().toIpPort().c_str();
+       // 客户端异常关闭
+        ChatService::instance()->clientCloseException(conn);
         conn->shutdown();
     }
 }

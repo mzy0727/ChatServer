@@ -233,6 +233,33 @@ main.cpp.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/OfflineMsgModel.o: model/OfflineMsgModel.cc.o
+
+.PHONY : model/OfflineMsgModel.o
+
+# target to build an object file
+model/OfflineMsgModel.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/OfflineMsgModel.cc.o
+.PHONY : model/OfflineMsgModel.cc.o
+
+model/OfflineMsgModel.i: model/OfflineMsgModel.cc.i
+
+.PHONY : model/OfflineMsgModel.i
+
+# target to preprocess a source file
+model/OfflineMsgModel.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/OfflineMsgModel.cc.i
+.PHONY : model/OfflineMsgModel.cc.i
+
+model/OfflineMsgModel.s: model/OfflineMsgModel.cc.s
+
+.PHONY : model/OfflineMsgModel.s
+
+# target to generate assembly for a file
+model/OfflineMsgModel.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/OfflineMsgModel.cc.s
+.PHONY : model/OfflineMsgModel.cc.s
+
 model/UserModel.o: model/UserModel.cc.o
 
 .PHONY : model/UserModel.o
@@ -281,6 +308,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/OfflineMsgModel.o"
+	@echo "... model/OfflineMsgModel.i"
+	@echo "... model/OfflineMsgModel.s"
 	@echo "... model/UserModel.o"
 	@echo "... model/UserModel.i"
 	@echo "... model/UserModel.s"

@@ -1,8 +1,18 @@
 #include "ChatServer.h"
+#include "ChatService.h"
 #include <iostream>
+#include <signal.h>
 using namespace std;
+
+// 处理服务器ctrl+c结束后，重置user的状态信息
+void resetHandler(int){
+    ChatService::instance()->reset();
+    exit(0);
+}
 int main()
 {
+    signal(SIGINT,resetHandler);
+
     EventLoop loop;
     InetAddress listenAddr(8888);
     // Create a ChatServer object

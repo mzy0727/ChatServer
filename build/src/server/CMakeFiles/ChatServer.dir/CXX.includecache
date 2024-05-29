@@ -6,12 +6,20 @@
 
 #IncludeRegexTransform: 
 
-../include/public.h
+../include/server/ChatServer.h
+tiny_network/net/EventLoop.h
+-
+tiny_network/net/TcpServer.h
+-
+tiny_network/logger/Logging.h
+-
 
 ../include/server/ChatService.h
 unordered_map
 -
 functional
+-
+mutex
 -
 json.hpp
 ../include/server/json.hpp
@@ -21,11 +29,13 @@ User.h
 ../include/server/User.h
 UserModel.h
 ../include/server/UserModel.h
+OfflineMsgModel.h
+../include/server/OfflineMsgModel.h
 
-../include/server/db/db.h
-mysql/mysql.h
--
+../include/server/model/OfflineMsgModel.h
 string
+-
+vector
 -
 
 ../include/server/model/User.h
@@ -366,19 +376,13 @@ limits
 type_traits
 -
 
-/home/mzy/Code/ChatServer/src/server/ChatService.cc
+/home/mzy/Code/ChatServer/src/server/main.cpp
+ChatServer.h
+/home/mzy/Code/ChatServer/src/server/ChatServer.h
 ChatService.h
 /home/mzy/Code/ChatServer/src/server/ChatService.h
-public.h
-/home/mzy/Code/ChatServer/src/server/public.h
-tiny_network/logger/Logging.h
--
-
-/home/mzy/Code/ChatServer/src/server/model/UserModel.cc
-UserModel.h
-/home/mzy/Code/ChatServer/src/server/model/UserModel.h
-db.h
-/home/mzy/Code/ChatServer/src/server/model/db.h
 iostream
+-
+signal.h
 -
 

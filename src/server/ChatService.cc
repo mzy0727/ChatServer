@@ -1,7 +1,8 @@
 #include "ChatService.h"
 #include "public.h"
 #include <tiny_network/logger/Logging.h>
-
+#include<vector>
+using namespace std;
 
 ChatService* ChatService::instance(){
     static ChatService service;
@@ -11,6 +12,7 @@ ChatService* ChatService::instance(){
 ChatService::ChatService(){
     _msgHandlerMap.insert({LOGIN_MSG,std::bind(&ChatService::login,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3)});
     _msgHandlerMap.insert({REG_MSG,std::bind(&ChatService::reg,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3)});
+    _msgHandlerMap.insert({ONE_CHAT_MSG,std::bind(&ChatService::oneChat,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3)});
 
 }
 void ChatService::login(const TcpConnectionPtr& conn, json &js, Timestamp time){
@@ -29,6 +31,10 @@ void ChatService::login(const TcpConnectionPtr& conn, json &js, Timestamp time){
             conn->send(responce.dump());
         }else{
              // 登录成功
+            {
+                lock_guard<mutex> lock(_connMutex);
+                _userConnMap.insert({id,conn});
+            }
             user.setState("online");
             _userModel.updateState(user);
 
@@ -37,6 +43,15 @@ void ChatService::login(const TcpConnectionPtr& conn, json &js, Timestamp time){
             responce["errno"] = 0;
             responce["id"] = user.getId();
             responce["name"] = user.getName();
+            
+            // 查询该用户是否有离线消息
+            vector<string> offlinemsgs = _offlineMsgModel.query(id);
+            if(!offlinemsgs.empty()){
+                responce["offlinemsg"] = offlinemsgs;
+                // 读取该用户的离线消息后，把用户的离线消息清除
+                _offlineMsgModel.remove(id);
+            }
+
             conn->send(responce.dump());
         }
         
@@ -71,6 +86,51 @@ void ChatService::reg(const TcpConnectionPtr& conn, json &js, Timestamp time){
         responce["errno"] = -1;
         conn->send(responce.dump());
    }
+}
+// 处理客户端异常退出
+void ChatService::clientCloseException(const TcpConnectionPtr& conn){
+    User user;
+    {
+        lock_guard<mutex> lock(_connMutex);
+        for(auto it = _userConnMap.begin(); it != _userConnMap.end(); ++it){
+            if(it->second == conn){
+                // 从map表删除用户的连接信息
+                user.setId(it->first);
+                _userConnMap.erase(it);
+                break;
+            }
+        }
+    }
+    if(user.getId() != -1){
+        user.setState("offline");
+        _userModel.updateState(user);
+    }
+}
+// 点对点聊天业务
+void ChatService::oneChat(const TcpConnectionPtr& conn, json &js, Timestamp time){
+    int toid = js["to"].get<int>();
+
+    {
+        lock_guard<mutex> lock(_connMutex);
+        auto it = _userConnMap.find(toid);
+        if(it != _userConnMap.end()){
+            // toid在线，转发消息   服务器主动推送消息给toid用户
+            it->second->send(js.dump());
+            return ;
+            
+        }
+            
+                
+    }
+    //toid不在线，存储离线消息
+    _offlineMsgModel.insert(toid,js.dump());
+    
+}
+
+// 服务器异常，业务重置方法
+void ChatService::reset(){
+    // 把online状态用户，设置为offline
+    _userModel.resetState();
 }
 
 MsgHandler ChatService::getHandler(int msgid){
