@@ -8,14 +8,6 @@
 
 ../include/public.h
 
-../include/server/ChatServer.h
-tiny_network/net/EventLoop.h
--
-tiny_network/net/TcpServer.h
--
-tiny_network/logger/Logging.h
--
-
 ../include/server/ChatService.h
 unordered_map
 -
@@ -25,6 +17,24 @@ json.hpp
 ../include/server/json.hpp
 tiny_network/net/TcpConnection.h
 -
+User.h
+../include/server/User.h
+UserModel.h
+../include/server/UserModel.h
+
+../include/server/db/db.h
+mysql/mysql.h
+-
+string
+-
+
+../include/server/model/User.h
+string
+-
+
+../include/server/model/UserModel.h
+User.h
+../include/server/model/User.h
 
 ../thirdparty/json.hpp
 algorithm
@@ -356,23 +366,19 @@ limits
 type_traits
 -
 
-/home/mzy/Code/ChatServer/src/server/ChatServer.cc
-ChatServer.h
-/home/mzy/Code/ChatServer/src/server/ChatServer.h
-json.hpp
-/home/mzy/Code/ChatServer/src/server/json.hpp
-string
--
-iostream
--
-ChatService.h
-/home/mzy/Code/ChatServer/src/server/ChatService.h
-
 /home/mzy/Code/ChatServer/src/server/ChatService.cc
 ChatService.h
 /home/mzy/Code/ChatServer/src/server/ChatService.h
 public.h
 /home/mzy/Code/ChatServer/src/server/public.h
 tiny_network/logger/Logging.h
+-
+
+/home/mzy/Code/ChatServer/src/server/model/UserModel.cc
+UserModel.h
+/home/mzy/Code/ChatServer/src/server/model/UserModel.h
+db.h
+/home/mzy/Code/ChatServer/src/server/model/db.h
+iostream
 -
 

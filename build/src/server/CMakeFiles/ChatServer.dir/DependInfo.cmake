@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mzy/Code/ChatServer/src/server/ChatServer.cc" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/ChatServer.cc.o"
   "/home/mzy/Code/ChatServer/src/server/ChatService.cc" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o"
+  "/home/mzy/Code/ChatServer/src/server/db/db.cc" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/db/db.cc.o"
   "/home/mzy/Code/ChatServer/src/server/main.cpp" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
+  "/home/mzy/Code/ChatServer/src/server/model/UserModel.cc" "/home/mzy/Code/ChatServer/build/src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,6 +16,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../include/server"
+  "../include/server/db"
+  "../include/server/model"
   "../include/client"
   "../thirdparty"
   "/usr/local/include/tiny_network/net"

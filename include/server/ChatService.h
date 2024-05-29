@@ -8,6 +8,8 @@ using namespace std;
 using json = nlohmann::json;
 
 #include<tiny_network/net/TcpConnection.h>
+#include "User.h"
+#include "UserModel.h"
 
 // 表示处理消息的事件回调方法类型
 using MsgHandler =  std::function<void(const TcpConnectionPtr &conn,json &js, Timestamp)>;
@@ -28,4 +30,5 @@ private:
     ChatService();
     // 存储消息id和其对于的业务处理方法
     unordered_map<int,MsgHandler> _msgHandlerMap;
+    UserModel _userModel;
 };

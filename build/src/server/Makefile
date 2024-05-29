@@ -179,6 +179,33 @@ ChatService.cc.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatService.cc.s
 .PHONY : ChatService.cc.s
 
+db/db.o: db/db.cc.o
+
+.PHONY : db/db.o
+
+# target to build an object file
+db/db.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/db.cc.o
+.PHONY : db/db.cc.o
+
+db/db.i: db/db.cc.i
+
+.PHONY : db/db.i
+
+# target to preprocess a source file
+db/db.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/db.cc.i
+.PHONY : db/db.cc.i
+
+db/db.s: db/db.cc.s
+
+.PHONY : db/db.s
+
+# target to generate assembly for a file
+db/db.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/db.cc.s
+.PHONY : db/db.cc.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -206,6 +233,33 @@ main.cpp.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/UserModel.o: model/UserModel.cc.o
+
+.PHONY : model/UserModel.o
+
+# target to build an object file
+model/UserModel.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.o
+.PHONY : model/UserModel.cc.o
+
+model/UserModel.i: model/UserModel.cc.i
+
+.PHONY : model/UserModel.i
+
+# target to preprocess a source file
+model/UserModel.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.i
+.PHONY : model/UserModel.cc.i
+
+model/UserModel.s: model/UserModel.cc.s
+
+.PHONY : model/UserModel.s
+
+# target to generate assembly for a file
+model/UserModel.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.s
+.PHONY : model/UserModel.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -221,9 +275,15 @@ help:
 	@echo "... ChatService.o"
 	@echo "... ChatService.i"
 	@echo "... ChatService.s"
+	@echo "... db/db.o"
+	@echo "... db/db.i"
+	@echo "... db/db.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/UserModel.o"
+	@echo "... model/UserModel.i"
+	@echo "... model/UserModel.s"
 .PHONY : help
 
 
