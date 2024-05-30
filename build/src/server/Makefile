@@ -233,6 +233,60 @@ main.cpp.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/FriendModel.o: model/FriendModel.cc.o
+
+.PHONY : model/FriendModel.o
+
+# target to build an object file
+model/FriendModel.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/FriendModel.cc.o
+.PHONY : model/FriendModel.cc.o
+
+model/FriendModel.i: model/FriendModel.cc.i
+
+.PHONY : model/FriendModel.i
+
+# target to preprocess a source file
+model/FriendModel.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/FriendModel.cc.i
+.PHONY : model/FriendModel.cc.i
+
+model/FriendModel.s: model/FriendModel.cc.s
+
+.PHONY : model/FriendModel.s
+
+# target to generate assembly for a file
+model/FriendModel.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/FriendModel.cc.s
+.PHONY : model/FriendModel.cc.s
+
+model/GroupModel.o: model/GroupModel.cc.o
+
+.PHONY : model/GroupModel.o
+
+# target to build an object file
+model/GroupModel.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/GroupModel.cc.o
+.PHONY : model/GroupModel.cc.o
+
+model/GroupModel.i: model/GroupModel.cc.i
+
+.PHONY : model/GroupModel.i
+
+# target to preprocess a source file
+model/GroupModel.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/GroupModel.cc.i
+.PHONY : model/GroupModel.cc.i
+
+model/GroupModel.s: model/GroupModel.cc.s
+
+.PHONY : model/GroupModel.s
+
+# target to generate assembly for a file
+model/GroupModel.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/GroupModel.cc.s
+.PHONY : model/GroupModel.cc.s
+
 model/OfflineMsgModel.o: model/OfflineMsgModel.cc.o
 
 .PHONY : model/OfflineMsgModel.o
@@ -308,6 +362,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/FriendModel.o"
+	@echo "... model/FriendModel.i"
+	@echo "... model/FriendModel.s"
+	@echo "... model/GroupModel.o"
+	@echo "... model/GroupModel.i"
+	@echo "... model/GroupModel.s"
 	@echo "... model/OfflineMsgModel.o"
 	@echo "... model/OfflineMsgModel.i"
 	@echo "... model/OfflineMsgModel.s"

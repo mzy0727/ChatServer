@@ -6,13 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/server/ChatServer.h
-tiny_network/net/EventLoop.h
--
-tiny_network/net/TcpServer.h
--
-tiny_network/logger/Logging.h
--
+../include/public.h
 
 ../include/server/ChatService.h
 unordered_map
@@ -31,6 +25,36 @@ UserModel.h
 ../include/server/UserModel.h
 OfflineMsgModel.h
 ../include/server/OfflineMsgModel.h
+FriendModel.h
+../include/server/FriendModel.h
+GroupModel.h
+../include/server/GroupModel.h
+
+../include/server/model/FriendModel.h
+User.h
+../include/server/model/User.h
+vector
+-
+
+../include/server/model/Group.h
+GroupUser.h
+../include/server/model/GroupUser.h
+string
+-
+vector
+-
+
+../include/server/model/GroupModel.h
+Group.h
+../include/server/model/Group.h
+string
+-
+vector
+-
+
+../include/server/model/GroupUser.h
+User.h
+../include/server/model/User.h
 
 ../include/server/model/OfflineMsgModel.h
 string
@@ -376,13 +400,13 @@ limits
 type_traits
 -
 
-/home/mzy/Code/ChatServer/src/server/main.cpp
-ChatServer.h
-/home/mzy/Code/ChatServer/src/server/ChatServer.h
+/home/mzy/Code/ChatServer/src/server/ChatService.cc
 ChatService.h
 /home/mzy/Code/ChatServer/src/server/ChatService.h
-iostream
+public.h
+/home/mzy/Code/ChatServer/src/server/public.h
+tiny_network/logger/Logging.h
 -
-signal.h
+vector
 -
 

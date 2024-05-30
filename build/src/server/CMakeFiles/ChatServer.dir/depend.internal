@@ -4,6 +4,10 @@
 src/server/CMakeFiles/ChatServer.dir/ChatServer.cc.o
  ../include/server/ChatServer.h
  ../include/server/ChatService.h
+ ../include/server/model/FriendModel.h
+ ../include/server/model/Group.h
+ ../include/server/model/GroupModel.h
+ ../include/server/model/GroupUser.h
  ../include/server/model/OfflineMsgModel.h
  ../include/server/model/User.h
  ../include/server/model/UserModel.h
@@ -12,6 +16,10 @@ src/server/CMakeFiles/ChatServer.dir/ChatServer.cc.o
 src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o
  ../include/public.h
  ../include/server/ChatService.h
+ ../include/server/model/FriendModel.h
+ ../include/server/model/Group.h
+ ../include/server/model/GroupModel.h
+ ../include/server/model/GroupUser.h
  ../include/server/model/OfflineMsgModel.h
  ../include/server/model/User.h
  ../include/server/model/UserModel.h
@@ -22,11 +30,27 @@ src/server/CMakeFiles/ChatServer.dir/db/db.cc.o
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o
  ../include/server/ChatServer.h
  ../include/server/ChatService.h
+ ../include/server/model/FriendModel.h
+ ../include/server/model/Group.h
+ ../include/server/model/GroupModel.h
+ ../include/server/model/GroupUser.h
  ../include/server/model/OfflineMsgModel.h
  ../include/server/model/User.h
  ../include/server/model/UserModel.h
  ../thirdparty/json.hpp
  /home/mzy/Code/ChatServer/src/server/main.cpp
+src/server/CMakeFiles/ChatServer.dir/model/FriendModel.cc.o
+ ../include/server/db/db.h
+ ../include/server/model/FriendModel.h
+ ../include/server/model/User.h
+ /home/mzy/Code/ChatServer/src/server/model/FriendModel.cc
+src/server/CMakeFiles/ChatServer.dir/model/GroupModel.cc.o
+ ../include/server/db/db.h
+ ../include/server/model/Group.h
+ ../include/server/model/GroupModel.h
+ ../include/server/model/GroupUser.h
+ ../include/server/model/User.h
+ /home/mzy/Code/ChatServer/src/server/model/GroupModel.cc
 src/server/CMakeFiles/ChatServer.dir/model/OfflineMsgModel.cc.o
  ../include/server/db/db.h
  ../include/server/model/OfflineMsgModel.h

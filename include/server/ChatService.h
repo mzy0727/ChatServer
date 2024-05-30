@@ -12,6 +12,8 @@ using json = nlohmann::json;
 #include "User.h"
 #include "UserModel.h"
 #include "OfflineMsgModel.h"
+#include "FriendModel.h"
+#include "GroupModel.h"
 // 表示处理消息的事件回调方法类型
 using MsgHandler =  std::function<void(const TcpConnectionPtr &conn,json &js, Timestamp)>;
 // 聊天服务器业务类
@@ -30,6 +32,16 @@ public:
     void reset();
     // 点对点聊天业务
     void oneChat(const TcpConnectionPtr& conn, json &js, Timestamp time);
+    // 添加好友业务
+    void addFriend(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    // 创建群组业务
+    void createGroup(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    // 加入群组业务
+    void addGroup(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    // 群组聊天业务
+    void groupChat(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    // 处理注销业务
+    void loginout(const TcpConnectionPtr &conn, json &js, Timestamp time);
     // 获取消息对应的处理器
     MsgHandler getHandler(int msgid);
 
@@ -44,4 +56,6 @@ private:
     // 数据操作类对象
     UserModel _userModel;
     OfflineMsgModel _offlineMsgModel;
+    FriendModel _friendModel;
+    GroupModel _groupModel;
 };
