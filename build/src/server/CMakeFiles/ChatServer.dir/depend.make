@@ -25,6 +25,7 @@ src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o: ../include/server/model/U
 src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o: ../thirdparty/json.hpp
 src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o: ../src/server/ChatService.cc
 
+src/server/CMakeFiles/ChatServer.dir/db/db.cc.o: ../include/server/db/db.h
 src/server/CMakeFiles/ChatServer.dir/db/db.cc.o: ../src/server/db/db.cc
 
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/ChatServer.h
@@ -59,4 +60,6 @@ src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.o: ../include/server/db/
 src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.o: ../include/server/model/User.h
 src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.o: ../include/server/model/UserModel.h
 src/server/CMakeFiles/ChatServer.dir/model/UserModel.cc.o: ../src/server/model/UserModel.cc
+
+src/server/CMakeFiles/ChatServer.dir/redis/redis.cc.o: ../src/server/redis/redis.cc
 
