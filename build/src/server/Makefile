@@ -179,6 +179,33 @@ ChatService.cc.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatService.cc.s
 .PHONY : ChatService.cc.s
 
+db/ConnectionPool.o: db/ConnectionPool.cc.o
+
+.PHONY : db/ConnectionPool.o
+
+# target to build an object file
+db/ConnectionPool.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/ConnectionPool.cc.o
+.PHONY : db/ConnectionPool.cc.o
+
+db/ConnectionPool.i: db/ConnectionPool.cc.i
+
+.PHONY : db/ConnectionPool.i
+
+# target to preprocess a source file
+db/ConnectionPool.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/ConnectionPool.cc.i
+.PHONY : db/ConnectionPool.cc.i
+
+db/ConnectionPool.s: db/ConnectionPool.cc.s
+
+.PHONY : db/ConnectionPool.s
+
+# target to generate assembly for a file
+db/ConnectionPool.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/ConnectionPool.cc.s
+.PHONY : db/ConnectionPool.cc.s
+
 db/db.o: db/db.cc.o
 
 .PHONY : db/db.o
@@ -383,6 +410,9 @@ help:
 	@echo "... ChatService.o"
 	@echo "... ChatService.i"
 	@echo "... ChatService.s"
+	@echo "... db/ConnectionPool.o"
+	@echo "... db/ConnectionPool.i"
+	@echo "... db/ConnectionPool.s"
 	@echo "... db/db.o"
 	@echo "... db/db.i"
 	@echo "... db/db.s"

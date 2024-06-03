@@ -1,11 +1,11 @@
 #include "db.h"
 #include <muduo/base/Logging.h>
 
-// 数据库配置信息
-static string server = "127.0.0.1";
-static string user = "root";
-static string password = "123456";
-static string dbname = "chat";
+// // 数据库配置信息
+// static string server = "127.0.0.1";
+// static string user = "root";
+// static string password = "123456";
+// static string dbname = "chat";
 
 // 初始化数据库连接
 MySQL::MySQL()
@@ -21,10 +21,10 @@ MySQL::~MySQL()
 }
 
 // 连接数据库
-bool MySQL::connect()
+bool MySQL::connect(string user, string passwd, string dbName, string ip, unsigned short port)
 {
-    MYSQL *p = mysql_real_connect(_conn, server.c_str(), user.c_str(),
-                                  password.c_str(), dbname.c_str(), 3306, nullptr, 0);
+    MYSQL *p = mysql_real_connect(_conn, ip.c_str(), user.c_str(),
+                                  passwd.c_str(), dbName.c_str(), port, nullptr, 0);
     if (p != nullptr)
     {
         // C和C++代码默认的编码字符是ASCII，如果不设置，从MySQL上拉下来的中文显示？
@@ -64,6 +64,19 @@ MYSQL_RES *MySQL::query(string sql)
     
     return mysql_use_result(_conn);
 }
+
+void MySQL::refreshAliveTime()
+{
+    m_alivetime = steady_clock::now();
+}
+
+long long MySQL::getAliveTime()
+{
+    nanoseconds res = steady_clock::now() - m_alivetime;
+    milliseconds millsec = duration_cast<milliseconds>(res);
+    return millsec.count();
+}
+
 
 // 获取连接
 MYSQL* MySQL::getConnection()
