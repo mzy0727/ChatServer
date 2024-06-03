@@ -56,8 +56,8 @@ vector<Group> GroupModel::queryGroups(int userid)
     vector<Group> groupVec;
 
     //MySQL mysql;
-     ConnectionPool* pool = ConnectionPool::getConnectPool();
-    shared_ptr<MySQL> conn = pool->getConnection();
+    //  ConnectionPool* pool = ConnectionPool::getConnectPool();
+    shared_ptr<MySQL> conn = ConnectionPool::getConnectPool()->getConnection();
     if (conn)
     {
         MYSQL_RES *res = conn->query(sql);
