@@ -179,6 +179,33 @@ ChatService.cc.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/ChatService.cc.s
 .PHONY : ChatService.cc.s
 
+db/Use_db.o: db/Use_db.cc.o
+
+.PHONY : db/Use_db.o
+
+# target to build an object file
+db/Use_db.cc.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/Use_db.cc.o
+.PHONY : db/Use_db.cc.o
+
+db/Use_db.i: db/Use_db.cc.i
+
+.PHONY : db/Use_db.i
+
+# target to preprocess a source file
+db/Use_db.cc.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/Use_db.cc.i
+.PHONY : db/Use_db.cc.i
+
+db/Use_db.s: db/Use_db.cc.s
+
+.PHONY : db/Use_db.s
+
+# target to generate assembly for a file
+db/Use_db.cc.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/Use_db.cc.s
+.PHONY : db/Use_db.cc.s
+
 db/db.o: db/db.cc.o
 
 .PHONY : db/db.o
@@ -205,6 +232,33 @@ db/db.s: db/db.cc.s
 db/db.cc.s:
 	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/db.cc.s
 .PHONY : db/db.cc.s
+
+db/sql_connection_pool.o: db/sql_connection_pool.cpp.o
+
+.PHONY : db/sql_connection_pool.o
+
+# target to build an object file
+db/sql_connection_pool.cpp.o:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/sql_connection_pool.cpp.o
+.PHONY : db/sql_connection_pool.cpp.o
+
+db/sql_connection_pool.i: db/sql_connection_pool.cpp.i
+
+.PHONY : db/sql_connection_pool.i
+
+# target to preprocess a source file
+db/sql_connection_pool.cpp.i:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/sql_connection_pool.cpp.i
+.PHONY : db/sql_connection_pool.cpp.i
+
+db/sql_connection_pool.s: db/sql_connection_pool.cpp.s
+
+.PHONY : db/sql_connection_pool.s
+
+# target to generate assembly for a file
+db/sql_connection_pool.cpp.s:
+	cd /home/mzy/Code/ChatServer/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/sql_connection_pool.cpp.s
+.PHONY : db/sql_connection_pool.cpp.s
 
 main.o: main.cpp.o
 
@@ -383,9 +437,15 @@ help:
 	@echo "... ChatService.o"
 	@echo "... ChatService.i"
 	@echo "... ChatService.s"
+	@echo "... db/Use_db.o"
+	@echo "... db/Use_db.i"
+	@echo "... db/Use_db.s"
 	@echo "... db/db.o"
 	@echo "... db/db.i"
 	@echo "... db/db.s"
+	@echo "... db/sql_connection_pool.o"
+	@echo "... db/sql_connection_pool.i"
+	@echo "... db/sql_connection_pool.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

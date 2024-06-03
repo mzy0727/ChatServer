@@ -8,6 +8,7 @@ using namespace std;
 using namespace muduo;
 using namespace muduo::net;
 
+#include "sql_connection_pool.h"
 #include "redis.h"
 #include "GroupModel.h"
 #include "FriendModel.h"
@@ -68,5 +69,7 @@ private:
 
     // redis操作对象
     Redis _redis;
+    
+    
 };
 

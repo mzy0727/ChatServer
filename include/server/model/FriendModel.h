@@ -1,6 +1,8 @@
 #pragma once
 
 #include "User.h"
+#include "db.h"
+#include "Use_db.h"
 #include <vector>
 using namespace std;
 
@@ -8,10 +10,14 @@ using namespace std;
 class FriendModel
 {
 public:
+
+    FriendModel();
     // 添加好友关系
     void insert(int userid, int friendid);
 
     // 返回用户好友列表
     vector<User> query(int userid);
+private:
+    MySQL *mysqlconn;
 };
 

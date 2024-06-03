@@ -18,6 +18,7 @@ ChatServer:: ChatServer(EventLoop* loop, const InetAddress& addr, const std::str
     _server.setMessageCallback(std::bind(&ChatServer::onMessage, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
     // 设置线程数量
     _server.setThreadNum(4);
+   
 }
 
 void ChatServer::start()
@@ -55,5 +56,11 @@ void ChatServer::onMessage(const TcpConnectionPtr& conn, Buffer* buf, Timestamp 
     auto msgHandler = ChatService::instance()->getHandler(js["msgid"].get<int>());
     // 回调消息对应绑定好的事件处理器，来执行相应的业务处理
     msgHandler(conn,js,time);
+
+
+    // std::string msg = buf->retrieveAllAsString();
+    //     LOG_INFO << conn->name() << " echo " << msg.size() << " bytes, "
+    //              << "data received at " << time.toFormattedString();
+    //     conn->send(msg);
 
 }

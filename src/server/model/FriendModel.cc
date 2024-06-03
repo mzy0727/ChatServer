@@ -1,6 +1,11 @@
 #include "FriendModel.h"
-#include "db.h"
 
+
+FriendModel::FriendModel(){
+     MYSQL *mysql = nullptr;
+     Use_DB *useDB = new Use_DB("127.0.0.1", "root", "123456", "chat", 10);
+     mysqlconn = new MySQL(&mysql,useDB->get_Connection_Pool());
+}
 // 添加好友关系
 void FriendModel::insert(int userid, int friendid)
 {
@@ -8,11 +13,12 @@ void FriendModel::insert(int userid, int friendid)
     char sql[1024] = {0};
     sprintf(sql, "insert into friend values(%d, %d)", userid, friendid);
 
-    MySQL mysql;
-    if (mysql.connect())
-    {
-        mysql.update(sql);
-    }
+    
+     mysqlconn->update(sql);
+    // if (mysql.connect())
+    // {
+    //     mysql.update(sql);
+    // }
 }
 
 // 返回用户好友列表
@@ -24,10 +30,10 @@ vector<User> FriendModel::query(int userid)
     sprintf(sql, "select a.id,a.name,a.state from user a inner join friend b on b.friendid = a.id where b.userid=%d", userid);
 
     vector<User> vec;
-    MySQL mysql;
-    if (mysql.connect())
-    {
-        MYSQL_RES *res = mysql.query(sql);
+   // MySQL mysql;
+   if (mysqlconn != nullptr)
+   {
+        MYSQL_RES *res =mysqlconn->query(sql);
         if (res != nullptr)
         {
             // 把userid用户的所有离线消息放入vec中返回

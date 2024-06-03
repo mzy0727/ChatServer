@@ -2,12 +2,15 @@
 
 #include <string>
 #include <vector>
+#include "db.h"
+#include "Use_db.h"
 
 using namespace std;
 
 // 提供离线消息表的操作接口方法
 class OfflineMsgModel{
 public:
+    OfflineMsgModel();
     // 存储用户的离线消息
     void insert(int userid, string msg);
 
@@ -17,5 +20,6 @@ public:
     // 查询用户的离线消息
     vector<string> query(int userid);
 private:
+    MySQL *mysqlconn;
 
 };

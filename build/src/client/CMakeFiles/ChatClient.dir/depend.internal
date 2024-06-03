@@ -3,6 +3,9 @@
 
 src/client/CMakeFiles/ChatClient.dir/main.cc.o
  ../include/public.h
+ ../include/server/db/Use_db.h
+ ../include/server/db/db.h
+ ../include/server/db/sql_connection_pool.h
  ../include/server/model/Group.h
  ../include/server/model/GroupUser.h
  ../include/server/model/User.h
