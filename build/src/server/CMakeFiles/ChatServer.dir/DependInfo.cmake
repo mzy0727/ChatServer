@@ -26,6 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include/server/redis"
   "../include/client"
   "../thirdparty"
+  "../thirdparty/spdlog"
   "/usr/local/include/tiny_network/net"
   "/usr/local/include/tiny_network/base"
   "/usr/local/include/tiny_network/timer"

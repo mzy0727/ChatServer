@@ -13,6 +13,48 @@ src/server/CMakeFiles/ChatServer.dir/ChatServer.cc.o
  ../include/server/model/UserModel.h
  ../include/server/redis/redis.h
  ../thirdparty/json.hpp
+ ../thirdparty/spdlog/common-inl.h
+ ../thirdparty/spdlog/common.h
+ ../thirdparty/spdlog/details/backtracer-inl.h
+ ../thirdparty/spdlog/details/backtracer.h
+ ../thirdparty/spdlog/details/circular_q.h
+ ../thirdparty/spdlog/details/console_globals.h
+ ../thirdparty/spdlog/details/fmt_helper.h
+ ../thirdparty/spdlog/details/log_msg-inl.h
+ ../thirdparty/spdlog/details/log_msg.h
+ ../thirdparty/spdlog/details/log_msg_buffer-inl.h
+ ../thirdparty/spdlog/details/log_msg_buffer.h
+ ../thirdparty/spdlog/details/null_mutex.h
+ ../thirdparty/spdlog/details/os-inl.h
+ ../thirdparty/spdlog/details/os.h
+ ../thirdparty/spdlog/details/periodic_worker-inl.h
+ ../thirdparty/spdlog/details/periodic_worker.h
+ ../thirdparty/spdlog/details/registry-inl.h
+ ../thirdparty/spdlog/details/registry.h
+ ../thirdparty/spdlog/details/synchronous_factory.h
+ ../thirdparty/spdlog/details/windows_include.h
+ ../thirdparty/spdlog/fmt/bundled/core.h
+ ../thirdparty/spdlog/fmt/bundled/format-inl.h
+ ../thirdparty/spdlog/fmt/bundled/format.h
+ ../thirdparty/spdlog/fmt/bundled/xchar.h
+ ../thirdparty/spdlog/fmt/fmt.h
+ ../thirdparty/spdlog/fmt/xchar.h
+ ../thirdparty/spdlog/formatter.h
+ ../thirdparty/spdlog/logger-inl.h
+ ../thirdparty/spdlog/logger.h
+ ../thirdparty/spdlog/mdc.h
+ ../thirdparty/spdlog/pattern_formatter-inl.h
+ ../thirdparty/spdlog/pattern_formatter.h
+ ../thirdparty/spdlog/sinks/ansicolor_sink-inl.h
+ ../thirdparty/spdlog/sinks/ansicolor_sink.h
+ ../thirdparty/spdlog/sinks/sink-inl.h
+ ../thirdparty/spdlog/sinks/sink.h
+ ../thirdparty/spdlog/sinks/wincolor_sink-inl.h
+ ../thirdparty/spdlog/sinks/wincolor_sink.h
+ ../thirdparty/spdlog/spdlog-inl.h
+ ../thirdparty/spdlog/spdlog.h
+ ../thirdparty/spdlog/tweakme.h
+ ../thirdparty/spdlog/version.h
  /home/mzy/Code/ChatServer/src/server/ChatServer.cc
 src/server/CMakeFiles/ChatServer.dir/ChatService.cc.o
  ../include/public.h
@@ -46,6 +88,48 @@ src/server/CMakeFiles/ChatServer.dir/main.cpp.o
  ../include/server/model/UserModel.h
  ../include/server/redis/redis.h
  ../thirdparty/json.hpp
+ ../thirdparty/spdlog/common-inl.h
+ ../thirdparty/spdlog/common.h
+ ../thirdparty/spdlog/details/backtracer-inl.h
+ ../thirdparty/spdlog/details/backtracer.h
+ ../thirdparty/spdlog/details/circular_q.h
+ ../thirdparty/spdlog/details/console_globals.h
+ ../thirdparty/spdlog/details/fmt_helper.h
+ ../thirdparty/spdlog/details/log_msg-inl.h
+ ../thirdparty/spdlog/details/log_msg.h
+ ../thirdparty/spdlog/details/log_msg_buffer-inl.h
+ ../thirdparty/spdlog/details/log_msg_buffer.h
+ ../thirdparty/spdlog/details/null_mutex.h
+ ../thirdparty/spdlog/details/os-inl.h
+ ../thirdparty/spdlog/details/os.h
+ ../thirdparty/spdlog/details/periodic_worker-inl.h
+ ../thirdparty/spdlog/details/periodic_worker.h
+ ../thirdparty/spdlog/details/registry-inl.h
+ ../thirdparty/spdlog/details/registry.h
+ ../thirdparty/spdlog/details/synchronous_factory.h
+ ../thirdparty/spdlog/details/windows_include.h
+ ../thirdparty/spdlog/fmt/bundled/core.h
+ ../thirdparty/spdlog/fmt/bundled/format-inl.h
+ ../thirdparty/spdlog/fmt/bundled/format.h
+ ../thirdparty/spdlog/fmt/bundled/xchar.h
+ ../thirdparty/spdlog/fmt/fmt.h
+ ../thirdparty/spdlog/fmt/xchar.h
+ ../thirdparty/spdlog/formatter.h
+ ../thirdparty/spdlog/logger-inl.h
+ ../thirdparty/spdlog/logger.h
+ ../thirdparty/spdlog/mdc.h
+ ../thirdparty/spdlog/pattern_formatter-inl.h
+ ../thirdparty/spdlog/pattern_formatter.h
+ ../thirdparty/spdlog/sinks/ansicolor_sink-inl.h
+ ../thirdparty/spdlog/sinks/ansicolor_sink.h
+ ../thirdparty/spdlog/sinks/sink-inl.h
+ ../thirdparty/spdlog/sinks/sink.h
+ ../thirdparty/spdlog/sinks/wincolor_sink-inl.h
+ ../thirdparty/spdlog/sinks/wincolor_sink.h
+ ../thirdparty/spdlog/spdlog-inl.h
+ ../thirdparty/spdlog/spdlog.h
+ ../thirdparty/spdlog/tweakme.h
+ ../thirdparty/spdlog/version.h
  /home/mzy/Code/ChatServer/src/server/main.cpp
 src/server/CMakeFiles/ChatServer.dir/model/FriendModel.cc.o
  ../include/server/db/ConnectionPool.h

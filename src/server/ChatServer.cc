@@ -7,6 +7,7 @@ using json = nlohmann::json;
 using namespace std;
 
 #include "ChatService.h"
+#include "spdlog/spdlog.h"
 
 ChatServer:: ChatServer(EventLoop* loop, const InetAddress& addr, const std::string& name)
     : _server(loop,addr,name),
@@ -29,6 +30,7 @@ void ChatServer::onConnection(const TcpConnectionPtr& conn)
 {
     if (conn->connected())
     {
+        spdlog::info("Connection UP : {:s} ", conn->peerAddress().toIpPort().c_str());
         LOG_INFO << "Connection UP : " << conn->peerAddress().toIpPort().c_str();
     }
     else
