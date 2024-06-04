@@ -33,7 +33,7 @@ bool ConnectionPool::parseJsonFile()
 
 void ConnectionPool::produceConnection()
 {
-    while (true)
+   // while (true)
     {
         unique_lock<mutex> locker(m_mutexQ);
         while (m_connectionQ.size() >= m_minSize)
@@ -47,7 +47,7 @@ void ConnectionPool::produceConnection()
 
 void ConnectionPool::recycleConnection()
 {
-    while (true)
+  //  while (true)
     {
         this_thread::sleep_for(chrono::milliseconds(500));
         lock_guard<mutex> locker(m_mutexQ);
